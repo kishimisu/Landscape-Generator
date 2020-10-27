@@ -68,7 +68,9 @@ Structure of the project :
 
 # Generated images example 
 
-_All parameters are set to default_
+All parameters are set to default. 
+
+Note that I took screenshots of the generated SVG output for performance purposes
 
 ![example output](output-examples/ls1.png)
 
