@@ -62,4 +62,6 @@ You can also enter a manual seed (represented by a number) or change the whole's
 
 ## UML Diagram
 
-![UML Diagram]("UML Diagram.png")
+Structure of the project :
+
+![UML Diagram](UML-Diagram.png)
