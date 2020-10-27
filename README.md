@@ -60,8 +60,26 @@ For each layer, you also have an option to reset the seed used for the number ge
 
 You can also enter a manual seed (represented by a number) or change the whole's scene seed and regenerate the 4 layers to have a completely new landscape
 
-## UML Diagram
+# UML Diagram
 
 Structure of the project :
 
 ![UML Diagram](UML-Diagram.png)
+
+# Generated images example 
+
+_All parameters are set to default_
+
+![example output](output-examples/ls1.png)
+
+![example output](output-examples/ls2.png)
+
+![example output](output-examples/ls3.png)
+
+![example output](output-examples/ls4.png)
+
+![example output](output-examples/ls5.png)
+
+![example output](output-examples/ls6.png)
+
+![example output](output-examples/ls7.png)
