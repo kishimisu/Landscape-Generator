@@ -4,7 +4,7 @@ LDFLAGS  := -L/usr/lib -lstdc++ -lm
 BUILD    := ./build
 OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := .
-TARGET   := program
+TARGET   := landscape-generator
 INCLUDE  := -Iinclude/
 SRC      :=                      \
    $(wildcard src/*/*.cpp) \
