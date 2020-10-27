@@ -1,7 +1,7 @@
 /**
-    Dans l'urgence de la livraison d'un code opérationnel
-    ce fichier source n'a pas été proprement restructuré
-    Ceci n'est pas un code "modèle" !
+    Dans l'urgence de la livraison d'un code opï¿½rationnel
+    ce fichier source n'a pas ï¿½tï¿½ proprement restructurï¿½
+    Ceci n'est pas un code "modï¿½le" !
 **/
 
 #include "util.h"
@@ -23,10 +23,10 @@ void videCin()
 }
 
 
-/// Cette fonction retourne un entier aléatoire dans [min...max]
+/// Cette fonction retourne un entier alï¿½atoire dans [min...max]
 int random(int min, int max)
 {
-    // Sur un système Linux il est possible(préférable ?) de faire
+    // Sur un systï¿½me Linux il est possible(prï¿½fï¿½rable ?) de faire
     //static std::mt19937 randGen( std::random_device{}() );
     static std::mt19937 randGen(time(nullptr));
     return std::uniform_int_distribution<>(min, max)(randGen);
@@ -54,15 +54,15 @@ int min(int a, int b, int c)
 
 int random(int min, int max, std::mt19937& seed)
 {
-    // Sur un système Linux il est possible(préférable ?) de faire
+    // Sur un systï¿½me Linux il est possible(prï¿½fï¿½rable ?) de faire
     //static std::mt19937 randGen( std::random_device{}() );
     return std::uniform_int_distribution<>(min, max)(seed);
 }
 
-/// Cette fonction retourne un réel aléatoire dans [min...max[
+/// Cette fonction retourne un rï¿½el alï¿½atoire dans [min...max[
 double random(double min, double max, std::mt19937& seed)
 {
-    // Sur un système Linux il est possible(préférable ?) de faire
+    // Sur un systï¿½me Linux il est possible(prï¿½fï¿½rable ?) de faire
     //static std::mt19937 randGen( std::random_device{}() );
     return std::uniform_real_distribution<>(min, max)(seed);
 }
@@ -101,15 +101,23 @@ int randomBetween(int param[2], std::mt19937& seed)
     return random(param[0], param[1], seed);
 }
 
+void clearScreen() {
+    #ifdef _WIN32
+        util::clearScreen();
+    #else
+        system("clear");
+    #endif
+}
+
 }
 
 
 /**
 
-Permettre de logger en console les "saisies simulées"
+Permettre de logger en console les "saisies simulï¿½es"
 venant d'un fichier de test
 
-Modifié (mutilé !) par rapport au code original :
+Modifiï¿½ (mutilï¿½ !) par rapport au code original :
 http://www.voidcn.com/article/p-vjnlygmc-gy.html
 
 PARTIE INTERFACE (pas dans le .h pour ne pas polluer)
@@ -127,10 +135,10 @@ PARTIE INTERFACE (pas dans le .h pour ne pas polluer)
 
 #include <cstdio>
 
-/// Couleur Windows par défaut des saisies simulées
+/// Couleur Windows par dï¿½faut des saisies simulï¿½es
 /// 0x0a -> Vert sur fond noir
 /// color : colorisation (WINDOWS seulement https://ss64.com/nt/color.html
-///                         préfixer par 0x, exemple 0x1a vert sur fond bleu)
+///                         prï¿½fixer par 0x, exemple 0x1a vert sur fond bleu)
 short autoCinWinColor = 0x0a;
 
 struct FILE_buffer_style
@@ -234,7 +242,7 @@ std::streambuf::int_type FILE_buffer::underflow()
             windowsChangeColor(autoCinWinColor);
 
     #endif // _WIN32
-    /// Echo à la console des caractères lus
+    /// Echo ï¿½ la console des caractï¿½res lus
     for (size_t i=0; i<n; ++i)
         std::cout << start[i];
 
@@ -252,7 +260,7 @@ std::streambuf::int_type FILE_buffer::underflow()
 }
 
 
-/// Adapté depuis https://stackoverflow.com/a/10151286
+/// Adaptï¿½ depuis https://stackoverflow.com/a/10151286
 static std::streambuf* previous_cinbuf=nullptr;
 static FILE_buffer* custom_sbuf;
 
@@ -260,7 +268,7 @@ static FILE_buffer* custom_sbuf;
 
 void util::startAutoCin(std::string fileName, size_t temporisation, short color)
 {
-    /// Erreur on ouvre simultanément 2 flots autoCin !
+    /// Erreur on ouvre simultanï¿½ment 2 flots autoCin !
     if (previous_cinbuf)
         throw std::runtime_error("Ouverture d'un nouveau flot autoCin sans fermeture precedent");
 
@@ -289,7 +297,7 @@ double util::distanceBetween(Coords c1, Coords c2)
 }
 
 
-/// Le code qui suit est spécifique aux plateformes Windows
+/// Le code qui suit est spï¿½cifique aux plateformes Windows
 /// et ne concerne ni macOS ni les Linux
 #ifdef _WIN32
 

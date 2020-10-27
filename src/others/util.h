@@ -56,6 +56,7 @@ double random(double min, double max, std::mt19937& seed);
 int random(int min, int max, std::mt19937& seed);
 int randomBetween(int param[2], std::mt19937& seed);
 double randomBetween(double param[2], std::mt19937& seed);
+void clearScreen();
 
 /// Le code qui suit est sp�cifique aux plateformes Windows
 /// et ne concerne ni macOS ni les Linux

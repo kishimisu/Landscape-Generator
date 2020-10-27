@@ -3,12 +3,12 @@ CXXFLAGS := -pedantic-errors -Wall -Wextra -std=c++11
 LDFLAGS  := -L/usr/lib -lstdc++ -lm
 BUILD    := ./build
 OBJ_DIR  := $(BUILD)/objects
-APP_DIR  := $(BUILD)/apps
+APP_DIR  := .
 TARGET   := program
 INCLUDE  := -Iinclude/
 SRC      :=                      \
    $(wildcard src/*/*.cpp) \
-   $(wildcard ./*.cpp) \
+   $(wildcard src/main.cpp) \
 
 OBJECTS  := $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

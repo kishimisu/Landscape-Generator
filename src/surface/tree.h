@@ -21,7 +21,7 @@ class Tree
         void drawSegmentShadow(Polygon& segment, Svgfile& out);
         void drawTrunkShadow(Polygon& trunk, Svgfile& out);
 
-        bool operator<(Tree const& tree) { return m_surfaceHeight > tree.m_surfaceHeight; };
+        bool operator<(Tree const& tree) const { return m_surfaceHeight > tree.m_surfaceHeight; };
 
     private:
         std::vector<Polygon> m_segments;
