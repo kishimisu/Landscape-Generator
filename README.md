@@ -59,3 +59,7 @@ For each parameter, you can set a minimum and a maximum value that will be used 
 For each layer, you also have an option to reset the seed used for the number generator for this specific layer, thus you can regenerate a layer independently from the other ones.
 
 You can also enter a manual seed (represented by a number) or change the whole's scene seed and regenerate the 4 layers to have a completely new landscape
+
+## UML Diagram
+
+![UML Diagram](UML Diagram.png)
